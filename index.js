@@ -1,4 +1,5 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Tray, Menu, MenuItem } = require("electron");
+const process = require("process");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -13,14 +14,29 @@ function createWindow() {
     // on widget form context
     alwaysOnTop: true,
     skipTaskbar: true,
-    hasShadow: true,
     closable: false,
+    hasShadow: true,
+    focusable: false,
     webPreferences: {
       nodeIntegration: true
     }
   });
 
+  tray = new Tray('./favicon.ico');
+  const menuItemExit = { label: 'exit', type: 'normal', role: 'close' };
+  menuItemExit.click = () => {
+    process.exit(0);
+  }
+  const menuItemSetting = { label: 'close', type: 'normal', role: 'close' };
+  const menuItemReload = { label: 'reload', type: 'normal', role: 'forceReload' };
+  const contextMenu = Menu.buildFromTemplate([ 
+    menuItemExit, menuItemSetting, menuItemReload
+  ]);
+  tray.setToolTip('exit?');
+  tray.setContextMenu(contextMenu);
+
   win.loadFile('./static/index.html');
 }
 
 app.whenReady().then(createWindow);
+console.log('app started');
