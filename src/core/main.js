@@ -52,7 +52,7 @@ function createWindow() {
   });
 
   // win.setIgnoreMouseEvents(true);
-  win.loadFile('../static/index.html');
+  win.loadFile('../ui.html');
 }
 
 app.whenReady().then(createWindow);
