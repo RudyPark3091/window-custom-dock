@@ -1,0 +1,29 @@
+{
+    "iconPath": "./favicon.ico",
+    "toolTip": "dock",
+    "onclick": "",
+    "onrightclick": "",
+    "ondoubleclick": "",
+    "menuItems": [
+        {
+            "label": "exit",
+            "type": "normal",
+            "click": ""
+        },
+        {
+            "label": "toggle window hiding",
+            "type": "normal",
+            "click": ""
+        },
+        {
+            "label": "console.log",
+            "type": "normal",
+            "click": ""
+        }
+    ],
+    "menuItemFunctions": [
+        "function exit() {process.exit(0);}",
+        "function hide() {if(win.isVisible()){win.hide();}else{win.show();}}",
+        "function log() {console.log('hello');}"
+    ]
+}

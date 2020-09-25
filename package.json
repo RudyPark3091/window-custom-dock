@@ -19,6 +19,7 @@
   "homepage": "https://github.com/RudyPark3091/window-custom-dock#readme",
   "dependencies": {
     "electron": "^10.1.2",
+    "eval": "^0.1.4",
     "window-size": "^1.1.1"
   }
 }
