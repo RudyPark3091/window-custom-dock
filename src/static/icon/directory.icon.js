@@ -1,2 +1,2 @@
 let icons = {};
-icons.directory = `<rect x="50" y ="10" width="80" height="80" fill="#ff6666"/>`;
+icons.directory = `<rect x="50" y ="20" width="60" height="60" fill="#ff6666"/>`;

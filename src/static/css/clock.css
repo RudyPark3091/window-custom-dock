@@ -5,4 +5,13 @@
     color: #ffff66;
     font-family: 'Agency FB';
     transition: all 0.1s ease-in-out;
+    animation: fadein 1s ease-in-out;
+}
+
+@keyframes fadein {
+    from {
+        color: transparent;
+    } to {
+        color: #ffff66;
+    }
 }

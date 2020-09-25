@@ -4,7 +4,7 @@ class Clock {
     this.time = this.date.toLocaleTimeString().substring(3);
     this.clockString = this.time[1] === ":" ? "0" + this.time : this.time;
     document.body.innerHTML +=
-      '<div id="clock"></div>';
+      `<div id="clock">${this.clockString}</div>`;
   }
 
   tick() {

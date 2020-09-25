@@ -8,11 +8,15 @@ class EventReceiver {
   
   handleMouseEnter() {
     const clock = document.getElementById("clock");
+    const svg = document.querySelector("svg");
     clock.style.color = "transparent";
+    svg.style.opacity = 1;
   }
 
   handleMouseLeave() {
     const clock = document.getElementById("clock");
+    const svg = document.querySelector("svg");
     clock.style.color = "#ffff66";
+    svg.style.opacity = 0;
   }
 }
