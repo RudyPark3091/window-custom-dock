@@ -1,7 +1,7 @@
 class IconBuilder {
   constructor() {
-    this.icons = [];
-    document.body.innerHTML += icons.directory;
+    document.body.innerHTML +=
+      `<svg width="800px" height="100px">` + icons.directory + icons.file + `</svg>`;
   }
 }
 
