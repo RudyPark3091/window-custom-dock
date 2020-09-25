@@ -4,11 +4,5 @@
     text-align: center;
     color: #ffff66;
     font-family: 'Agency FB';
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-#clock.over {
-    font-size: 70px;
-    margin-top: 10px;
+    transition: all 0.1s ease-in-out;
 }
