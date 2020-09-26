@@ -1,7 +1,7 @@
 class IconBuilder {
   constructor() {
-    document.body.innerHTML +=
-      `<svg width="800px" height="100px">` + icons.directory + icons.file + `</svg>`;
+    document.getElementById("event-receiver").innerHTML +=
+      `<svg width="760px" height="100px">` + icons.directory + icons.file + `</svg>`;
   }
 }
 

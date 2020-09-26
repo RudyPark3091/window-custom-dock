@@ -1,8 +1,8 @@
 {
     "width": 800,
-    "height": 100,
+    "height": 120,
     "x": 590,
-    "y": 980,
+    "y": 960,
     "resizable": false,
     "frame": false,
     "transparent": true,

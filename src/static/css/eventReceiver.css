@@ -1,9 +1,10 @@
 #event-receiver {
   width: calc(95% - 2px);
-  height: 75%;
+  height: 90px;
   position: fixed;
   left: 2.5%;
   bottom: 0px;
   background-color: transparent;
+  border: 1px solid coral;
   z-index: 2;
 }
