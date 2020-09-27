@@ -1,6 +1,6 @@
 const execFile = require('child_process').execFile;
 exports.child = function () {
-  const child = execFile('', [], {
+  const child = execFile('explorer.exe', [], {
     detached: true,
     shell: true
   }
