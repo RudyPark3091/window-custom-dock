@@ -23,9 +23,6 @@ class EventReceiver {
 
   execExplorer() {
     const { ipcRenderer } = require("electron");
-    ipcRenderer.on('executeProgram', (event, arg) => {
-      return 0;
-    });
     ipcRenderer.send('executeProgram', 'explorer');
   }
 }
