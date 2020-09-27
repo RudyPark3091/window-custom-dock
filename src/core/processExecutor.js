@@ -1,25 +1,14 @@
+const path = require('path');
 const execFile = require('child_process').execFile;
-exports.child = function () {
-  const child = execFile('explorer.exe', [], {
-    detached: true,
-    shell: true
-  }
-  // , (err, stdout, stderr) => {
-  //   if (err) {
-  //     throw err;
-  //   }
 
-  //     console.log(stdout);
-  //   },
-  //   {
-  //     encoding: 'utf8',
-  //     timeout: 0,
-  //     maxBuffer: 200 * 1024,
-  //     killSignal: 'SIGTERM',
-  //     cwd: null,
-  //     env:null,
-  //     code: 0
-  //   }
+
+exports.child = function (param) {
+  let parsed = param.split(' ');
+  const child = execFile(parsed[0], parsed.slice(1),
+    {
+      cwd: path.parse(__dirname).root,
+      shell: true
+    }
   );
   //spawn
   child.on('error', (err) => {

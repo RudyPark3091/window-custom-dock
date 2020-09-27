@@ -23,7 +23,7 @@ function createWindow() {
 }
 
 ipcMain.on("executeProgram", (event, args) => {
-  child();
+  child(args);
 });
 
 app.whenReady().then(createWindow);
