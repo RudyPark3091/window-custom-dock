@@ -15,7 +15,9 @@ class IconBuilder {
 
   execProgram() {
     const path = require("path");
-    ipcRenderer.send('executeProgram', `start ${path.parse(__dirname).root}`);
+    ipcRenderer.send('executeProgram', 
+      'C:/Users/grayb/AppData/Local/Discord/app-0.0.308/Discord.exe'
+    );
   }
 
   execNotion() {
