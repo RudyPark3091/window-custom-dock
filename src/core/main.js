@@ -1,8 +1,10 @@
 const { app, BrowserWindow, Tray, Menu, MenuItem } = require("electron");
+const { ipcMain } = require("electron");
 const process = require("process");
 
 const { initWindow } = require("./window.js");
 const { buildMenuItems, initMenu, initTray } = require("./tray.js");
+const { child } = require("./processExecutor.js");
 
 var tray, win, menu, menuItems;
 
@@ -19,6 +21,10 @@ function createWindow() {
   const menu = initMenu(menuItems);
   tray = initTray(menu);
 }
+
+ipcMain.on("executeProgram", (event, args) => {
+  child();
+});
 
 app.whenReady().then(createWindow);
 console.log('app started');

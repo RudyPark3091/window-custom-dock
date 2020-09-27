@@ -1,3 +1,5 @@
+const { ipcRenderer } = require("electron");
+
 (function () {
   const clock = new Clock();
   clock.tick();
