@@ -1,6 +1,7 @@
-const { app, BrowserWindow, Tray, Menu, MenuItem } = require("electron");
+const { app, BrowserWindow, Tray, Menu, MenuItem, nativeImage } = require("electron");
 const { ipcMain } = require("electron");
 const process = require("process");
+const path = require("path");
 
 const { initWindow } = require("./window.js");
 const { buildMenuItems, initMenu, initTray } = require("./tray.js");
@@ -24,6 +25,13 @@ function createWindow() {
 
 ipcMain.on("executeProgram", (event, args) => {
   child(args);
+});
+
+ipcMain.on("ondrop", (event, filePath) => {
+  console.log(filePath);
+  app.getFileIcon(filePath, {size: "large"}).then(icon => {
+    event.reply("iconReply", icon.toDataURL());
+  });
 });
 
 app.whenReady().then(createWindow);
